@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year 2026 | Personalized Greetings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- html2canvas for saving card -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <!-- Confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- NEW FULL SCREEN HEADER -->
+    <header class="fullscreen-header" id="fullscreenHeader">
+        <div class="header-overlay"></div>
+        
+        <canvas id="fireworks-canvas"></canvas>
+        <div class="confetti-container" id="confettiContainer"></div>
+        
+        <div class="main-year-display">
+            <div class="year-2026">2026</div>
+            <div class="happy-new-year">Happy New Year</div>
+        </div>
+        
+        <div class="welcome-section">
+            <h2 class="welcome-title">Welcome to 2026!</h2>
+            
+            <div class="name-input-container">
+                <label class="name-input-label">Your Name:</label>
+                <input type="text" 
+                       id="fullscreenNameInput" 
+                       class="name-input"
+                       placeholder="Enter your name here"
+                       maxlength="30"
+                       autocomplete="off">
+            </div>
+            
+            <button class="cta-button" id="fullscreenStartBtn">
+                <i class="fas fa-rocket"></i> Launch New Year Celebration
+            </button>
+        </div>
+    </header>
+    
+    <!-- MODERN OPENING ANIMATION (Hidden initially) -->
+    <div class="opening-animation" id="openingAnimation" style="display: none;">
+        <div class="opening-bg"></div>
+        
+        <div class="opening-content">
+            <h1 class="main-opening-title">HAPPY NEW YEAR 2026</h1>
+            
+            <div class="countdown-animation">🎉 2026 🎉</div>
+            
+            <p class="opening-subtitle">
+                Enter your name to unlock a personalized New Year experience filled with blessings, 
+                beautiful moments, and special greetings crafted just for you.
+            </p>
+            
+            <div class="modern-input-container">
+                <input type="text" 
+                       id="openingNameInput" 
+                       class="modern-input"
+                       placeholder=" "
+                       maxlength="30"
+                       autocomplete="off">
+                <label class="floating-label">Enter Your Beautiful Name</label>
+            </div>
+            
+            <button class="modern-btn" id="startBtn">
+                <i class="fas fa-rocket"></i> CLICK HERE TO START YOUR NEW YEAR JOURNEY
+            </button>
+            
+            <div class="icon-animation">
+                <div class="icon-item">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-fire"></i>
+                </div>
+            </div>
+            
+            <p class="opening-footer-text">
+                <i class="fas fa-sparkles"></i> Get ready for an unforgettable New Year celebration!
+            </p>
+        </div>
+        
+        <div class="opening-fireworks" id="openingFireworks"></div>
+    </div>
+    
+    <!-- Starry Background -->
+    <div class="starry-night">
+        <div class="stars" id="stars"></div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container" id="mainContent" style="display: none;">
+        <!-- MODERN HEADER AFTER LAUNCH -->
+        <header class="modern-header" id="modernHeader">
+            <div class="main-year-title">
+                <div class="main-year-title-text">HAPPY NEW YEAR 2026</div>
+            </div>
+            
+            <div class="welcome-glow"></div>
+            
+            <div class="user-glow-container">
+                <div class="user-glow-name" id="userDisplayName">
+                    <span id="userNameText">Dear Friend</span>
+                </div>
+            </div>
+            
+            <div class="blessing-text">
+                <i class="fas fa-star" style="color: #ffd700; margin-right: 10px;"></i>
+                May this year bring you endless joy, success, and beautiful moments
+                <i class="fas fa-heart" style="color: #ff4500; margin-left: 10px;"></i>
+            </div>
+        </header>
+        
+        <!-- Feature Cards -->
+        <div class="cards-grid">
+            <div class="feature-card">
+                <div class="card-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3 class="card-title">HAPPY NEW YEAR 2026</h3>
+                <p class="card-text">पुराना साल गया यादों के संग,<br>नया साल लाया खुशियों के रंग।<br>हर सपना हो पूरा, हर दिन हो खास,<br>मुबारक हो आपको नया साल 2026 🌸.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="card-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3 class="card-title">HAPPY NEW YEAR 2026</h3>
+                <p class="card-text">नए साल की नई सुबह, नई आस लेकर आए,<br>हर पल मुस्कान, हर दिन खुशियाँ लाए।<br>दुआ है दिल से ये साल बने सबसे हसीन,<br>Happy New Year 2026 🎉</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="card-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h3 class="card-title">HAPPY NEW YEAR 2026</h3>
+                <p class="card-text">बीते लम्हों को अलविदा कहो,<br>नए ख्वाबों को दिल में बसाओ।कामयाबी,<br> प्यार और सुकून मिले हर मोड़ पर,<br>नया साल 2026 मुबारक हो आपको ✨</p>
+            </div>
+        </div>
+        
+        <!-- PHOTO GALLERY SECTION - FIXED SIZE -->
+        <section class="photo-gallery-section">
+            <h2 class="section-title">Close Friend Circle New Year 2026</h2>
+            
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <img src="boliviainteligente-2PdUd-d6bvM-unsplash.jpg" alt="Saurabh Kumar" loading="lazy" onerror="this.src='https://via.placeholder.com/300x300/ffd700/000?text=Saurabh+Kumar'">
+                    <div class="photo-overlay">
+                        <h3 class="photo-title"></h3>
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <img src="boliviainteligente-MdC1yGXBgws-unsplash.jpg" alt="Ranjeet Kumar" loading="lazy" onerror="this.src='https://via.placeholder.com/300x300/ff4500/fff?text=Ranjeet+Kumar'">
+                    <div class="photo-overlay">
+                        <h3 class="photo-title"></h3>
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <img src="boliviainteligente-r2qsJ-T9_jg-unsplash.jpg" alt="Abhishek Kumar" loading="lazy" onerror="this.src='https://via.placeholder.com/300x300/00bfff/fff?text=Abhishek+Kumar'">
+                    <div class="photo-overlay">
+                        <h3 class="photo-title"></h3>
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <img src="boliviainteligente-zquGd4MNJRk-unsplash.jpg" alt="Vipin Kumar" loading="lazy" onerror="this.src='https://via.placeholder.com/300x300/32cd32/000?text=Vipin+Kumar'">
+                    <div class="photo-overlay">
+                        <h3 class="photo-title"></h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Special Greeting Card -->
+        <section class="greeting-card-section">
+            <h2 class="section-title">Your Personal New Year Card</h2>
+            
+            <div class="greeting-card-container">
+                <div class="greeting-card" id="greetingCard">
+                    <!-- Decorative Elements -->
+                    <div class="card-decoration decoration-1">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="card-decoration decoration-2">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="card-decoration decoration-3">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="card-decoration decoration-4">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    
+                    <!-- Card Content -->
+                    <div class="card-content">
+                        <p class="greeting-text">
+                            As the clock strikes twelve and a new year begins,
+                            <br>May your life be filled with happiness, success, and wins!
+                        </p>
+                        
+                        <div class="user-greeting" id="cardUserName">
+                            Happy New Year 2026, Dear Friend!
+                        </div>
+                        
+                        <!-- Shayari Sections - ONE BY ONE -->
+                        <div class="shayari-main-section">
+                            <!-- Shayari 1 -->
+                            <div class="shayari-section">
+                                <div class="shayari-number">1</div>
+                                <p class="shayari-text">
+                                    ✨ सितारों की चमक से रोशन हो आपकी रात<br>
+                                    चाँद की मोहब्बत से भर जाए हर बात<br>
+                                    2026 का हर पल हो आपके लिए खास<br>
+                                    खुशियों की बारिश हो, और सफलता का साथ 🥳
+                                </p>
+                            </div>
+                            
+                            <!-- Shayari 2 -->
+                            <div class="shayari-section">
+                                <div class="shayari-number">2</div>
+                                <p class="shayari-text">
+                                    🥳 नया साल आया है, खुशियाँ लाया है,<br>
+                                    हर दिल में उमंग का सवेरा लाया है।<br>
+                                    2026 की इस नई सुबह में,<br>
+                                    आपको मिले सफलता और प्यार का खजाना! 🎉
+                                </p>
+                            </div>
+                            
+                            <!-- Shayari 3 -->
+                            <div class="shayari-section">
+                                <div class="shayari-number">3</div>
+                                <p class="shayari-text">
+                                    🎊 बीते साल की यादें रहें खास,<br>
+                                    नए साल में हर दिन हो आपका पास।<br>
+                                    सपनों की उड़ान हो आसान,<br>
+                                    2026 लाए आपकी जिंदगी में नई पहचान। ✨
+                                </p>
+                            </div>
+                            
+                            <!-- Shayari 4 -->
+                            <div class="shayari-section">
+                                <div class="shayari-number">4</div>
+                                <p class="shayari-text">
+                                    🎉 चमकते सितारों से रोशन हो रात,<br>
+                                    प्यारे रिश्तों से भरी हो बात।<br>
+                                    2026 का हर दिन आपके लिए हो खास,<br>
+                                    खुशियों की हो भरमार, और मिले हर काम में पास! 🎊
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Music Control with Progress Bar -->
+                        <div class="music-control-section">
+                            <div class="music-control-wrapper">
+                                <div class="music-progress-container">
+                                    <div class="music-progress-bar" id="musicProgressBar">
+                                        <div class="music-progress" id="musicProgress"></div>
+                                    </div>
+                                    <div class="music-time-display">
+                                        <span class="current-time" id="currentTime">0:00</span>
+                                        <span class="total-time" id="totalTime">0:00</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="music-controls">
+                                    <div class="music-control-btn play-pause-btn" id="playPauseBtn">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="music-control-btn mute-btn" id="muteBtn">
+                                        <i class="fas fa-volume-up"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="music-title" id="musicTitle">New Year Celebration Music</div>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <button class="action-btn share-btn" id="shareCardBtn">
+                                <i class="fas fa-share-alt"></i> Share Card
+                            </button>
+                            <button class="action-btn download-btn" id="downloadCardBtn">
+                                <i class="fas fa-download"></i> Download Card
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Social Media Section - OUTSIDE Greeting Card -->
+        <section class="social-media-section">
+            <h2 class="social-title">Share the Celebration</h2>
+            
+            <div class="social-icons-container">
+                <div class="social-icon whatsapp" id="whatsappShare" title="Share on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="tooltip">Share on WhatsApp</span>
+                </div>
+                <div class="social-icon instagram" id="instagramShare" title="Visit Instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span class="tooltip">Visit Instagram</span>
+                </div>
+                <div class="social-icon facebook" id="facebookShare" title="Visit Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span class="tooltip">Visit Facebook</span>
+                </div>
+            </div>
+            
+        </section>
+        
+        <!-- Footer -->
+        <footer>
+            <p class="footer-text">
+                Created with <span class="heart"><i class="fas fa-heart"></i></span> for New Year 2026
+            </p>
+            <p class="footer-text">
+                Wishing you a year filled with joy, prosperity, and beautiful moments
+            </p>
+            <p style="color: rgba(255, 255, 255, 0.6); margin-top: 20px; font-size: 0.9rem;">
+                © 2026 New Year Celebrations | May all your dreams come true
+            </p>
+        </footer>
+    </div>
+    
+    <!-- Toast Container -->
+    <div id="toastContainer"></div>
+    
+    <!-- Background Music Player -->
+    <audio id="backgroundMusic" loop>
+        <source src="happy.mp3" type="audio/mpeg">
+        <!-- Fallback audio source -->
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
